@@ -1,0 +1,32 @@
+header {
+  height: 85vmin;
+  width: 100dvw;
+  display: flex;
+  gap: .5vmin;
+  /* background: var(--bg1); */
+  &::before {
+    content:"";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(0deg, var(--active), transparent);
+    opacity: .05;
+    user-select: none;
+    pointer-events: none;
+    z-index: 5;
+  }
+}
+/* #appPreview {
+  aspect-ratio: 4 / 3;
+  max-width: 85%;
+  height: calc(100% - 8rem);
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-radius: var(--border-rad);
+} */

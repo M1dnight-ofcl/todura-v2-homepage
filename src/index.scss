@@ -1,0 +1,126 @@
+@import url('https://fonts.cdnfonts.com/css/br-cobane');
+:root {
+  --bg1: #151515;
+  --bg2: #202020;
+  --bg3: #101010;
+  --bg4: #131313;
+  --bg5: #171717;
+  --ui1: #252525;
+  --ui2: #303030;
+  --ui3: #353535;
+  --ui4: #404040;
+  --h1: #f5f5f5;
+  --h2: #f0f0f0;
+  --h3: #e5e5e5;
+  --p1: #d5d5d5;
+  --p2: #d0d0d0;
+  --p3: #c5c5c5;
+  --active: #6e18df;
+  --active2: #2031c4;
+  --outline: #45454590;
+  --font: '', sans-serif;
+  --border-rad: 10px;
+}
+html * {
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+}
+body {
+  background: var(--bg1);
+}
+#root {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100dvh;
+  width: 100dvw;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.split_left {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.split_right {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.gap_small {
+  height: .5rem;
+  width: 100%;
+}
+.gap_medium {
+  height: 1.5rem;
+  width: 100%;
+}
+.gap_large {
+  height: 3rem;
+  width: 100%;
+}
+.sectionWrapper {
+  width: 80dvw;
+  max-width: 100vmax;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.contentWrapper {
+  aspect-ratio: 1 / 1;
+  height: calc(100% - 5rem);
+  max-width: calc(100% - 5rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 30;
+  * {
+    z-index: 31;
+  }
+  h1 {
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+    margin: 0;
+    font-size: 6rem;
+    /* color: var(--h1); */
+    background: linear-gradient(45deg,var(--active),var(--active2));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h2 {
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+    margin: 0;
+    font-size: 3rem;
+    color: var(--h3);
+  }
+  p {
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--p2);
+  }
+}
