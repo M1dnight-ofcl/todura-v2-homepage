@@ -19,14 +19,53 @@ header {
     z-index: 5;
   }
 }
-/* #appPreview {
+.appPreviewWrapper {
   aspect-ratio: 4 / 3;
-  max-width: 85%;
-  height: calc(100% - 8rem);
-  transform: translate(-50%,-50%);
+  width: 800px;
+  max-width: calc(100% - 8rem);
   position: absolute;
   top: 50%;
+  transform: translate(-50%,-50%);
   left: 50%;
-  background: #fff;
+  background: #303030;
   border-radius: var(--border-rad);
-} */
+  border: var(--outline) 1px solid;
+  &::after {
+    content: "";
+    z-index: 19;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    background: var(--active);
+    filter: blur(10vmin) drop-shadow(0 0 30vmin var(--active));
+    opacity: .5;
+  }
+  #appPreview {
+    border-radius: var(--border-rad);
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+}
+#s1 {
+  background: var(--bg2);
+  border-top: solid 1px var(--outline);
+  border-bottom: solid 1px var(--outline);
+}
+.section {
+  height: 85vmin;
+  width: 100dvw;
+  display: flex;
+  gap: .5vmin;
+}
